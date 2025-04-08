@@ -30,7 +30,7 @@ const VenueContactSection = () => {
           margin: 0,
           padding: 0,
           background: "linear-gradient(135deg, #003B8B, #007FCF)",
-          borderRadius: "20px", // 👈 Added curved edges
+          borderRadius: "20px",
         }}
       >
         <div
@@ -104,40 +104,40 @@ const VenueContactSection = () => {
               }}
             >
               <tbody>
-                {[["Dr D Indumathi", "+91 9876543210"],
+                {[
+                  ["Dr D Indumathi", "+91 9876543210"],
                   ["Dr R Rekha", "+91 9123456780"],
                   ["Dr K Sathiyapriya", "+91 9988776655"],
-                  ["Dr R Senthil Prabha", "+91 9090909090"]].map(
-                  ([name, phone], i) => (
-                    <tr key={i}>
-                      <td
-                        style={{
-                          padding: "6px 6px 6px 0",
-                          fontSize: "0.9em",
-                          textAlign: "left",
-                          width: "60%",
-                        }}
+                  ["Dr R Senthil Prabha", "+91 9090909090"],
+                ].map(([name, phone], i) => (
+                  <tr key={i}>
+                    <td
+                      style={{
+                        padding: "6px 6px 6px 0",
+                        fontSize: "0.9em",
+                        textAlign: "left",
+                        width: "60%",
+                      }}
+                    >
+                      <strong>{name}</strong>
+                    </td>
+                    <td
+                      style={{
+                        padding: "6px 0",
+                        fontSize: "0.9em",
+                        textAlign: "left",
+                        width: "40%",
+                      }}
+                    >
+                      <a
+                        className="contact-link"
+                        href={`tel:${phone.replace(/\s+/g, "")}`}
                       >
-                        <strong>{name}</strong>
-                      </td>
-                      <td
-                        style={{
-                          padding: "6px 0",
-                          fontSize: "0.9em",
-                          textAlign: "left",
-                          width: "40%",
-                        }}
-                      >
-                        <a
-                          className="contact-link"
-                          href={`tel:${phone.replace(/\s+/g, "")}`}
-                        >
-                          {phone}
-                        </a>
-                      </td>
-                    </tr>
-                  )
-                )}
+                        {phone}
+                      </a>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
             <p style={{ fontSize: "0.9em", marginTop: "10px" }}>

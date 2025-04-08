@@ -27,13 +27,14 @@ const Sponsor = () => {
           width: "100%",
           background: "linear-gradient(135deg, #003B8B, #007FCF)",
           padding: "50px 20px",
+          marginTop:"40px",
           textAlign: "center",
           boxSizing: "border-box",
           margin: 0,
-          borderRadius: "20px", // 👈 Curved edges here
+          borderRadius: "20px",
+          marginBottom: "40px", // 👈 Added spacing here
         }}
       >
-        {/* Section Title */}
         <h2
           style={{
             color: "#fff",
@@ -44,7 +45,6 @@ const Sponsor = () => {
           Sponsors
         </h2>
 
-        {/* Sponsor Cards Grid */}
         <div
           style={{
             display: "flex",
@@ -61,7 +61,6 @@ const Sponsor = () => {
           ))}
         </div>
 
-        {/* Association Line with Logo below */}
         <div
           style={{
             display: "flex",
