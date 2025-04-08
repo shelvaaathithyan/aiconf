@@ -16,8 +16,8 @@ const WelcomeCardSection = () => {
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
-    let scrollStep = 1;
-    let scrollDelay = 30;
+    let scrollStep = 2; // Increased scroll speed
+    let scrollDelay = 16; // Faster and smoother interval
 
     const scroll = () => {
       if (scrollContainer) {
